@@ -5,14 +5,11 @@ from PyPDF2 import PdfReader, PdfWriter
 # Global Variables
 filenames = []
 
-# Function to merge PDFs selected
-#---------------------------------------------------------
+
 def merge_pdfs(paths):
     pdf_writer = PdfWriter()
-    print("Passed")
+
     for path in paths:
-        print(paths)
-        print("yes")
         pdf_reader = PdfReader(path)
         for page in range(len(pdf_reader.pages)):
             # Add each page to the writer object
